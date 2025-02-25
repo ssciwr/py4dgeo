@@ -37,6 +37,8 @@ jobs:
       env:
         CIBW_ARCHS: "${{ matrix.arch }}"
 
+    - run: ls -al ./wheelhouse
+
     - uses: actions/upload-artifact@v4
       with:
         path: ./wheelhouse/*.whl
